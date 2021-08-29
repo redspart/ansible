@@ -1,0 +1,16 @@
+---
+- hosts: macos
+  roles:
+    - brew
+    - python3
+    - stow
+    - ripgrip
+    - alacritty
+    - neovim
+    - nodejs
+    - chrome
+    - tmux
+    - workplace_essentials
+    - vscode
+    - nvim-lsp
+    - dotfiles

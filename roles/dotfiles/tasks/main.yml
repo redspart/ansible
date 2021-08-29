@@ -1,0 +1,14 @@
+---
+
+- name: Create directories
+  file:
+    path: "personal/"
+    state: directory
+
+- name: Pull dotfiles
+  git:
+    repo: "{{ dotfiles }}"
+    dest: "personal/"
+
+- name: Run init in dotfiles
+  shell: sh personal/init stow

@@ -1,0 +1,11 @@
+---
+
+- name: Install Zoom
+  homebrew_cask:
+    name: zoom
+    state: present
+
+- name: Install Slack
+  homebrew_cask:
+    name: slack
+    state: present
