@@ -1,0 +1,6 @@
+---
+
+- name: Install kitty terminal
+  homebrew_cask:
+    name: kitty
+    state: present
