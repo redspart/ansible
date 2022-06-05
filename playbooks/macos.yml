@@ -6,6 +6,7 @@
     - stow
     - nodejs
     - chrome
+    - lazygit
     - tmux
     - workplace_essentials
     - vscode

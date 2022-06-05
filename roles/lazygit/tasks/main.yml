@@ -1,0 +1,6 @@
+---
+
+- name: Install lazygit terminal
+  homebrew_cask:
+    name: lazygit
+    state: present
