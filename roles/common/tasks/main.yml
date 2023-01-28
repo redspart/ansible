@@ -1,0 +1,21 @@
+---
+
+- name: Install common software
+  ansible.builtin.package:
+    name:
+      - stow
+      - visual-studio-code
+      - tmux
+      - ripgrip
+      - kitty
+      - lazygit
+      - google-chrome
+    state: latest
+
+- name: Install required work software:
+  ansible.builtin.package:
+    name:
+      - zoom
+      - slack
+    state: latest
+  when:  

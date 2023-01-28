@@ -1,6 +1,0 @@
----
-
-- name: Install alacritty
-  homebrew_cask:
-    name: alacritty
-    state: present

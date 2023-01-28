@@ -5,16 +5,16 @@
     name: efm-langserver
     state: present
 
-- name: TSServer
-  npm:
-    name: {{ item }}
-    global: yes
-  with_items:
-    - typescript
-    - typescript-language-server
+      #- name: TSServer
+      #npm:
+      #  name: "{{ item }}"
+      #  global: yes
+      #with_items:
+      #  - typescript
+      #  - typescript-language-server
 
-- name: Jedi-langauge-server
-  pip:
-    name: jedi-langauge-server
-    executable: pip3
+      #- name: Jedi-langauge-server
+      #pip:
+      #  name: jedi-langauge-server
+      #  executable: pip3
 

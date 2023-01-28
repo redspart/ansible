@@ -1,0 +1,25 @@
+---
+
+- name: Remove lazygit + neovim
+  shell: rm -rf {{ lookup('env', 'HOME') }}/installs
+
+- name: Clone lazygit
+  ansible.builtin.git:
+    repo: "https://github.com/jesseduffield/lazygit.git"
+    dest: {{ SOFTWARE_DIR }}/lazygit
+
+- name: Install lazygit
+  become: true
+  shell: "cd {{ SOFTWARE_DIR }}/lazygit && go install"
+
+- name: Clone Neovim
+  ansible.builtin.git:
+    repo: 'https://github.com/neovim/neovim.git'
+    dest: "{{ SOFTWARE_DIR  }}/neovim"
+
+- name: Build neovim
+  shell: "cd {{ SOFTWARE_DIR }}/neovim && make -j 20"
+
+- name: Install neovim
+  become: true
+  shell: "cd {{ SOFTWARE_DIR }}/neovim && make install"
