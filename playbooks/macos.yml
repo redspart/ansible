@@ -1,17 +1,4 @@
 ---
 - hosts: macos
   roles:
-    - brew
-    - python3
-    - stow
-    - nodejs
-    - chrome
-    - lazygit
-    - tmux
-    - workplace_essentials
-    - vscode
-    - ripgrip
-    - kitty
-    - neovim
-    - nvim-lsp
-    - dotfiles
+    - pde

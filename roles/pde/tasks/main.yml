@@ -6,7 +6,7 @@
 - name: Clone lazygit
   ansible.builtin.git:
     repo: "https://github.com/jesseduffield/lazygit.git"
-    dest: {{ SOFTWARE_DIR }}/lazygit
+    dest: "{{ SOFTWARE_DIR }}/lazygit"
 
 - name: Install lazygit
   become: true
